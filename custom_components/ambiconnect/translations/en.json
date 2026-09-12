@@ -1,0 +1,38 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Ambibox ambiCHARGE Home",
+        "description": "The box runs its own MQTT broker. Credentials are in the Ambibox app under the settings for external energy management systems.",
+        "data": {
+          "host": "Broker address",
+          "port": "Port",
+          "username": "Username",
+          "password": "Password",
+          "device_topic": "Base topic"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Broker not reachable",
+      "invalid_auth": "Username or password rejected"
+    },
+    "abort": {
+      "already_configured": "This box is already set up"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Control",
+        "description": "This box tolerates only one regulator. With evcc or the box's own ChargeControl running alongside, charging sessions abort at arbitrary points.\n\nThe floor is measured: 510 W runs stably, 459 W trips the power stage and ends the session. The box does not clamp on its own.",
+        "data": {
+          "control_enabled": "Enable control",
+          "min_power_w": "Minimum charge power (W, DC side)",
+          "ramp_factor": "Ramp factor per step",
+          "ramp_interval_s": "Ramp interval (s)"
+        }
+      }
+    }
+  }
+}

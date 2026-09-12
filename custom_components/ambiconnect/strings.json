@@ -1,0 +1,38 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Ambibox ambiCHARGE Home",
+        "description": "Die Box betreibt ihren MQTT-Broker selbst. Zugangsdaten stehen in der Ambibox-App unter den Einstellungen für externe Energiemanagementsysteme.",
+        "data": {
+          "host": "Broker-Adresse",
+          "port": "Port",
+          "username": "Benutzer",
+          "password": "Kennwort",
+          "device_topic": "Basis-Topic"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Broker nicht erreichbar",
+      "invalid_auth": "Benutzer oder Kennwort abgelehnt"
+    },
+    "abort": {
+      "already_configured": "Diese Box ist bereits eingebunden"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Steuerung",
+        "description": "Diese Box verträgt nur einen Regler. Läuft daneben evcc oder das box-eigene ChargeControl, brechen Ladevorgänge an willkürlichen Punkten ab.\n\nDie Untergrenze ist gemessen: 510 W laufen stabil, 459 W lösen die Leistungsendstufe aus und beenden die Sitzung. Die Box begrenzt nicht selbst.",
+        "data": {
+          "control_enabled": "Steuerung freigeben",
+          "min_power_w": "Kleinste Ladeleistung (W, DC-seitig)",
+          "ramp_factor": "Rampenfaktor je Schritt",
+          "ramp_interval_s": "Rampenintervall (s)"
+        }
+      }
+    }
+  }
+}
